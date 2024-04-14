@@ -19,7 +19,7 @@ data = [
 # Configuration for the Highcharts map
 chart_def = {
     "chart": {
-        "map": world_topology
+        "map": "topology"
     },
     "title": {
         "text": "Medals in Various Cities (2022)",
