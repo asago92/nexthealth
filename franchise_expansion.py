@@ -23,6 +23,22 @@ chartDef={ 'title': {
     'subtitle': {
         'text': 'Source: Fictional Data'
     },
+    'tooltip': {
+        'headerFormat': "",
+        'pointFormat': '{point.city} ({point.country}, {point.year})<br/>' +
+                       'Total medals: {point.z}<br/>' +
+                       '<span style="color: #ffd700;">●</span> {point.gold}<br/>' +
+                       '<span style="color: #c0c0c0;">●</span> {point.silver}<br/>' +
+                       '<span style="color: #cd7f32;">●</span> {point.bronze}<br/>'
+    },
+    Highcharts.mapChart('container', {
+    'chart': {
+        'map': 'topology'
+    },
+
+    'legend': {
+        'enabled': false
+    },
     'mapNavigation': {
         'enabled': True,
         'buttonOptions': {
@@ -40,15 +56,6 @@ chartDef={ 'title': {
             ]
         }
     },
-    'tooltip': {
-        'headerFormat': "",
-        'pointFormat': '{point.city} ({point.country}, {point.year})<br/>' +
-                       'Total medals: {point.z}<br/>' +
-                       '<span style="color: #ffd700;">●</span> {point.gold}<br/>' +
-                       '<span style="color: #c0c0c0;">●</span> {point.silver}<br/>' +
-                       '<span style="color: #cd7f32;">●</span> {point.bronze}<br/>'
-    },
-  'chart': {'map': 'topology'},
   'series': [{
         'name': 'Medals data',
         'type': 'mapbubble',
