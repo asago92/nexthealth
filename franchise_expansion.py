@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit_highcharts as hg
+import streamlit_highcharts as hct
 import requests
 
 # Fetch the world topology JSON for Highcharts map
@@ -17,12 +17,13 @@ data = [
 ]
 
 # Configuration for the Highcharts map
-options = {
+chart_def = {
     "chart": {
         "map": world_topology
     },
     "title": {
-        "text": "Medals in Various Cities (2022)"
+        "text": "Medals in Various Cities (2022)",
+        "align": "left"
     },
     "subtitle": {
         "text": "Source: Fictional Data"
@@ -54,6 +55,7 @@ options = {
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
-hg.streamlit_highcharts(options=options, height="600px")
+hct.streamlit_highcharts(chart_def, height=600)  # 600 is the chart height
+
 
 
