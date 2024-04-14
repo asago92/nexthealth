@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit_highcharts as hct
+import streamlit_highcharts as hg
 import requests
 
 
