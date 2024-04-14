@@ -21,7 +21,7 @@ chartDef= { 'mapChart' ('container', {
     },
 
     'legend': {
-        'enabled': false
+        'enabled': False
     },
     'mapNavigation': {
         'enabled': True,
