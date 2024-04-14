@@ -15,23 +15,7 @@ data = [
     ["Los Angeles", "USA", "2022", 34.05, -118.24, 5, 2, 2, 1]
 ]
 
-
-chartDef={ 'title': {
-        'text': 'Medals in Various Cities (2022)',
-        'align': 'left'
-    },
-    'subtitle': {
-        'text': 'Source: Fictional Data'
-    },
-    'tooltip': {
-        'headerFormat': "",
-        'pointFormat': '{point.city} ({point.country}, {point.year})<br/>' +
-                       'Total medals: {point.z}<br/>' +
-                       '<span style="color: #ffd700;">●</span> {point.gold}<br/>' +
-                       '<span style="color: #c0c0c0;">●</span> {point.silver}<br/>' +
-                       '<span style="color: #cd7f32;">●</span> {point.bronze}<br/>'
-    },
-    Highcharts.mapChart('container', {
+chartDef.mapChart('container', {
     'chart': {
         'map': 'topology'
     },
@@ -45,7 +29,7 @@ chartDef={ 'title': {
             'verticalAlign': 'bottom'
         }
     },
-    'mapView"': {
+    'mapView': {
         'fitToGeometry': {
             'type': 'MultiPoint',
             'coordinates': [
@@ -55,6 +39,21 @@ chartDef={ 'title': {
                 [-68, -55]   # Chile south
             ]
         }
+    },
+    'title': {
+        'text': 'Medals in Various Cities (2022)',
+        'align': 'left'
+    },
+    'subtitle': {
+        'text': 'Source: Fictional Data'
+    },
+    'tooltip': {
+        'headerFormat': "",
+        'pointFormat': '{point.city} ({point.country}, {point.year})<br/>' +
+                       'Total medals: {point.z}<br/>' +
+                       '<span style="color: #ffd700;">●</span> {point.gold}<br/>' +
+                       '<span style="color: #c0c0c0;">●</span> {point.silver}<br/>' +
+                       '<span style="color: #cd7f32;">●</span> {point.bronze}<br/>'
     },
   'series': [{
         'name': 'Medals data',
