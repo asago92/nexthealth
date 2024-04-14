@@ -1,6 +1,7 @@
 import streamlit as st
 import streamlit_highcharts as hg
 import json
+import requests
 
 async def main():
     topology_url = 'https://code.highcharts.com/mapdata/custom/world.topo.json'
@@ -69,11 +70,13 @@ async def main():
 
     hg.highcharts_chart(options=options, width='100%', height='600px', use_container_width=False)
 
-st.set_page_config(layout='wide')
-st.title('Summer Olympics Medals Visualization')
-st.write("This visualization shows Norwegian medals in the Summer Olympics from 1996 to 2020.")
-st.write("Data source: [Wikipedia](https://en.wikipedia.org/wiki/Norway_at_the_Olympics)")
+if __name__ == "__main__":
+    st.set_page_config(layout='wide')
+    st.title('Summer Olympics Medals Visualization')
+    st.write("This visualization shows Norwegian medals in the Summer Olympics from 1996 to 2020.")
+    st.write("Data source: [Wikipedia](https://en.wikipedia.org/wiki/Norway_at_the_Olympics)")
 
-# Run the async function to display the chart
-await main()
+    # Run the async function to display the chart
+    import asyncio
+    asyncio.run(main())
 
