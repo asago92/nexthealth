@@ -64,7 +64,7 @@ chartDef= { 'mapChart' ('container', {
         'minSize': '5%',
         'maxSize': '12.5%'
     }]
-})
+})}
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
