@@ -54,6 +54,6 @@ options = {
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
-hg.highcharts(options=options, height="600px")
+hg.streamlit_highcharts(options=options, height="600px")
 
 
