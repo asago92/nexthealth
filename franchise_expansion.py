@@ -18,6 +18,9 @@ data = [
 
 # Configuration for the Highcharts map
 chart_def = {
+    "chart": {
+        "map": world_topology
+    },
     "title": {
         "text": "Medals in Various Cities (2022)",
         "align": "left"
@@ -31,8 +34,6 @@ chart_def = {
             "verticalAlign": "bottom"
         }
     },
-    'chart': { 'height': '80%',
-             'type': 'topology'},
     "mapView": {
         "fitToGeometry": {
             "type": "MultiPoint",
@@ -65,7 +66,7 @@ chart_def = {
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
-hct.streamlit_highcharts(chart_def, height=640)  # Specify height in pixels
+hct.streamlit_highcharts(chart_def, height=600)  # Specify height in pixels
 
 
 
