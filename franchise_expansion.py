@@ -55,7 +55,7 @@ chart_def = {
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
-hct.streamlit_highcharts(chart_def, height=600)  # 600 is the chart height
+hct.streamlit_highcharts(chart_def, height=640)  # 600 is the chart height
 
 
 
