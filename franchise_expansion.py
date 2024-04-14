@@ -15,7 +15,7 @@ data = [
     ["Los Angeles", "USA", "2022", 34.05, -118.24, 5, 2, 2, 1]
 ]
 
-Highcharts.mapChart('container', {
+chartDef= { 'mapChart' ('container', {
     'chart': {
         'map': 'topology'
     },
