@@ -1,2 +1,2 @@
 streamlit
-streamlit-highcharts
+streamlit_highcharts
