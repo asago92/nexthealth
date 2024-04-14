@@ -34,6 +34,17 @@ chart_def = {
             "verticalAlign": "bottom"
         }
     },
+    "mapView": {
+        "fitToGeometry": {
+            "type": "MultiPoint",
+            "coordinates": [
+                [-164, 54],  # Alaska west
+                [-35, 84],   # Greenland north
+                [179, -38],  # New Zealand east
+                [-68, -55]   # Chile south
+            ]
+        }
+    },
     "tooltip": {
         "headerFormat": "",
         "pointFormat": '{point.city} ({point.country}, {point.year})<br/>' +
@@ -56,6 +67,7 @@ chart_def = {
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
 hct.streamlit_highcharts(chart_def, height=600)  # Specify height in pixels
+
 
 
 
