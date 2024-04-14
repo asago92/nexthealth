@@ -62,6 +62,6 @@ chartDef={ 'title': {
 
 # Display the map using streamlit_highcharts
 st.title("Olympic Medals Distribution")
-hg.streamlit_highcharts(chart_def, height=640)  # Specify height in pixels
+hg.streamlit_highcharts(chartDef, height=640)  # Specify height in pixels
 
 
